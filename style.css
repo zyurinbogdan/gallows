@@ -1,0 +1,59 @@
+*,
+* ::after,
+* ::before {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+header{
+    display: flex;
+}
+
+.restart {
+    border: 2px solid red;
+    border-radius: 10px;
+    margin: 20px 20% 0 20px;
+}
+.restart p {
+    padding: 10px;
+    font-size: 30px;
+}
+
+.main{
+    border: 3px solid blue;
+    border-radius: 30%;
+    font-size: 40px;
+}
+
+
+.img{
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+.pole{
+    display: flex;
+    margin: 20px 0 0 35%;
+    font-size: 24px;
+}
+
+.label{
+    margin-right: 10px;
+}
+
+.knopkaOk{
+    display: inline-block;
+    width: 60px;
+    text-align: center;
+    font-size: 25px;
+    line-height: 40px;
+    margin-left: 35px;
+    border: 3px solid grey;
+    border-radius: 10px;
+}
+
+.answer{
+    text-align: center;
+}
