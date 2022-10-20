@@ -13,7 +13,9 @@ const word = getRandomArrayElement();
 
 buttonOk.addEventListener('click', () => {
     if (/^[а-я]{1,1}$/.test(input.value)) {
-        addLetter(input.value, word);
+        if ( checkLetter(input.value, word)) {
+            addLetter(input.value)
+        }
         input.value = '';
     } else {
         alert('Введите 1 букву от а до я');
@@ -53,7 +55,7 @@ function changeImg () {
 
 
 function checkLetter (guess, word) {
-    
+    return word.split('').some((letter) => letter === guess);
 }
 
 
