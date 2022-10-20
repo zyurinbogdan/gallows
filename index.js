@@ -1,11 +1,15 @@
 import addLetter from "./addLetter.js";
 import restartBtn from "./restartBtn.js";
-
+import getRandomArrayElement from "./arrRandom.js";
+import playerWins from "./playerWins.js";
 
 const answer = document.getElementsByClassName('answer')[0];
 const buttonOk = document.getElementById('knopkaOk');
 const input = document.getElementById('name');
 const restart = document.getElementById('restart');
+const word = getRandomArrayElement();
+
+
 
 buttonOk.addEventListener('click', () => {
     if (/^[а-я]{1,1}$/.test(input.value)) {
@@ -17,25 +21,13 @@ buttonOk.addEventListener('click', () => {
     }
 })
 
+buttonOk.addEventListener('click',() => {
+    if (playerWins()) {
+        showModal();
+    }
+});
+
 restart.addEventListener('click', restartBtn);
-
-const words = [
-    'монитор',
-    'кабинет',
-    'арбуз',
-    'ручка',
-    'машина',
-    'морковка',
-    'школа',
-    'телерадиокомпания',
-    'еж',
-];
-
-function getRandomArrayElement (words) {
-    return words[Math.floor(Math.random()*words.length)];
-}
-
-const word = getRandomArrayElement(words);
 
 
 
@@ -49,10 +41,20 @@ const word = getRandomArrayElement(words);
     }
 })(word);
 
+function changeImg () {
+    let i = 0;
+    const img = document.getElementById('img');
+    const imgArr = ['./imgs/2.png', './imgs/3.png', './imgs/4.png'];
+    return () => {
+        img.src = imgArr[i++];
+    };
+}
 
 
 
-
+function checkLetter (guess, word) {
+    
+}
 
 
 

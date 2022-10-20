@@ -10,8 +10,6 @@ const words = [
     'еж',
 ];
 
-function getRandomArrayElement (words) {
+export default function getRandomArrayElement () {
     return words[Math.floor(Math.random()*words.length)];
- }
-
-export const word = getRandomArrayElement(words);
+}
