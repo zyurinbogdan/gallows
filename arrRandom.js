@@ -1,8 +1,4 @@
-function getRandomArrayElement(words){
-    return words[Math.floor(Math.random()*words.length)]
- }
-
- const words = [
+const words = [
     'монитор',
     'кабинет',
     'арбуз',
@@ -12,5 +8,10 @@ function getRandomArrayElement(words){
     'школа',
     'телерадиокомпания',
     'еж',
-]
-console.log(getRandomArrayElement(words))
+];
+
+function getRandomArrayElement (words) {
+    return words[Math.floor(Math.random()*words.length)];
+ }
+
+export const word = getRandomArrayElement(words);

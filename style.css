@@ -30,10 +30,13 @@ header{
 
 
 .img{
+    height: 600px;
     margin-left: 50%;
     transform: translateX(-50%);
 }
-
+img {
+    height: 600px;
+}
 .pole{
     display: flex;
     margin: 20px 0 0 35%;
@@ -58,4 +61,10 @@ header{
 
 .answer{
     text-align: center;
+}
+
+.letter {
+    font-size: 40px;
+    letter-spacing: 10px;
+    
 }

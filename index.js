@@ -1,15 +1,25 @@
+import addLetter from "./addLetter.js";
+import restartBtn from "./restartBtn.js";
+
+
 const answer = document.getElementsByClassName('answer')[0];
 const buttonOk = document.getElementById('knopkaOk');
 const input = document.getElementById('name');
 const restart = document.getElementById('restart');
 
-buttonOk.addEventListener('click', (e) => {
-    addLetter(input.value, word);
-    input.value = '';
+buttonOk.addEventListener('click', () => {
+    if (/^[а-я]{1,1}$/.test(input.value)) {
+        addLetter(input.value, word);
+        input.value = '';
+    } else {
+        alert('Введите 1 букву от а до я');
+        input.value = '';
+    }
 })
 
+restart.addEventListener('click', restartBtn);
 
- const words = [
+const words = [
     'монитор',
     'кабинет',
     'арбуз',
@@ -23,12 +33,9 @@ buttonOk.addEventListener('click', (e) => {
 
 function getRandomArrayElement (words) {
     return words[Math.floor(Math.random()*words.length)];
- }
+}
 
 const word = getRandomArrayElement(words);
-
-const attempts = 3;
-
 
 
 
@@ -44,24 +51,9 @@ const attempts = 3;
 
 
 
-function checkUnderscore () {
-    const answerCollection = [...document.getElementsByClassName('letter')];
-    answerCollection.every()
-}
 
 
-function addLetter (guess, word) {
-    const answerCollection = document.getElementsByClassName('letter');
-    for (let i = 0; i < word.length; i++) {
-        if (word[i] === guess) {
-            answerCollection[i].innerText = guess;
-        }
-    }
-}
 
 
-function restartBtn () {
-    location.reload();
-}
 
-restart.addEventListener('click', restartBtn);
+
