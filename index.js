@@ -1,9 +1,11 @@
 const answer = document.getElementsByClassName('answer')[0];
 const buttonOk = document.getElementById('knopkaOk');
 const input = document.getElementById('name');
+const restart = document.getElementById('restart');
 
-buttonOk.addEventListener('click', () => {
-    addLetter(input.value)
+buttonOk.addEventListener('click', (e) => {
+    addLetter(input.value, word);
+    input.value = '';
 })
 
 
@@ -58,3 +60,8 @@ function addLetter (guess, word) {
 }
 
 
+function restartBtn () {
+    location.reload();
+}
+
+restart.addEventListener('click', restartBtn);

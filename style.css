@@ -11,12 +11,13 @@ header{
     display: flex;
 }
 
-.restart {
+#restart {
     border: 2px solid red;
     border-radius: 10px;
     margin: 20px 20% 0 20px;
+    cursor: pointer;
 }
-.restart p {
+#restart p {
     padding: 10px;
     font-size: 30px;
 }
@@ -43,7 +44,7 @@ header{
     margin-right: 10px;
 }
 
-.knopkaOk{
+#knopkaOk{
     display: inline-block;
     width: 60px;
     text-align: center;
@@ -52,6 +53,7 @@ header{
     margin-left: 35px;
     border: 3px solid grey;
     border-radius: 10px;
+    cursor: pointer;
 }
 
 .answer{
