@@ -69,6 +69,51 @@ img {
     
 }
 
-.modal {
+.modalWrap {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid rgb(30, 126, 56);
+    width: 500px;
+    height: 200px;
+    text-align: center;
+    background-color: rgb(184, 200, 82);
+    border-radius: 10px;
+}
 
+.modalWrap .text {
+    font-size: 30px;
+    font-weight: 600;
+
+}
+
+.modalWrap .newGameWrap {
+    background-color:rgb(255, 255, 255);
+    position: relative;
+    top: 29%;
+    width: 497px;
+    height: 70px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.modalWrap .newGameBtn {
+    display: inline-block;
+    border: 2px solid rgb(75, 75, 75);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 150px;
+    height: 30px;
+    border-radius: 5px;
+    background-color: rgb(206, 206, 206);
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.5s;
+}
+
+.modalWrap .newGameBtn:hover {
+    box-shadow: -5px 2px 7px 0px;
 }
