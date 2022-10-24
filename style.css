@@ -90,8 +90,8 @@ img {
 
 .modalWrap .newGameWrap {
     background-color:rgb(255, 255, 255);
-    position: relative;
-    top: 29%;
+    position: absolute;
+    bottom: 0px;
     width: 497px;
     height: 70px;
     border-bottom-left-radius: 10px;
