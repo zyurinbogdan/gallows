@@ -1,9 +1,9 @@
-export default function showModalLose (word) {
+export default function showModal (textToShow) {
     const modalWrap = document.createElement('div');
     modalWrap.classList.add('modalWrap');
     const text = document.createElement('p');
     text.classList.add('text');
-    text.innerText = `вы проиграли, правильное слово ${word}`;
+    text.innerText = textToShow;
     const newGameWrap = document.createElement('div');
     newGameWrap.classList.add('newGameWrap');
     const newGameBtn = document.createElement('p');
